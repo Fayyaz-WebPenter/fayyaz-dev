@@ -1,43 +1,832 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fayyaz's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - iPortfolio Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <header>
-        <h1>Fayyaz's Portfolio</h1>
-        <p>Welcome to my online portfolio!</p>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="cccc.jpg" alt="Project 1 Screenshot" />
-        <p>Hi, I'm Fayyaz, a Full Stack Developer with over 6 years of experience in front-end and back-end web development. I specialize in responsive web designs and custom-coded websites that enhance user experience.</p>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li>
-                <h3>WhatsApp Toilor Project </h3>
-                <p>I Create New WhatsApp Toilor Website</p>
-                <a href="https://github.com/fayyaz-webpenter/project1" target="_blank">View on GitHub</a>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/fayyaz.jpeg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Fayyaz Ahmad</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
             </li>
-            <li>
-                <h3>Homey Theme</h3>
-                <p>I Create New Homey Theme</p>
-                <a href="https://github.com/fayyaz-webpenter/project2" target="_blank">View on GitHub</a>
-            </li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="fayyazwebpenter@gmail.com">fayyaz-webpenter@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/fayyaz-webpenter" target="_blank">fayyaz-webpenter</a></p>
-    </section>
-    <footer>
-        <p>© 2024 Fayyaz Webpenter</p>
-    </footer>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+  <!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <!-- Background Image -->
+  <img src="assets/img/hero-bg.jpg" alt="Hero Background" data-aos="fade-in" class="lazyload">
+
+  <!-- Hero Content -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h1>Fayyaz Ahmad</h1>
+    <p>
+      I'm a <span class="typed" data-typed-items="Designer, Developer, Freelancer">Designer</span>
+      <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+    </p>
+  </div>
+
+</section>
+<!-- /Hero Section -->
+
+  <!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and detail-oriented developer with over 6 years of experience specializing in front-end development, responsive web design, and custom coding. My work revolves around delivering user-friendly solutions that not only meet but exceed client expectations.
+    </p>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center">
+
+      <!-- Profile Image -->
+      <div class="col-lg-4">
+        <img src="assets/img/my-profile-img.jpg" class="img-fluid rounded" alt="Profile Image of Fayyaz Ahmad">
+      </div>
+
+      <!-- About Content -->
+      <div class="col-lg-8 content">
+        <h3>Full Stack Developer &amp; Front-End Specialist</h3>
+        <p class="fst-italic py-3">
+          I specialize in creating high-quality websites and applications using HTML, CSS, JavaScript, PHP, and frameworks like Bootstrap and Tailwind CSS. From converting designs into responsive web pages to building complete CMS systems, I ensure seamless user experiences.
+        </p>
+
+        <!-- Info Rows -->
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1998</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>https://fayyaz-webpenter.github.io/fayyaz-dev.github.io/</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0309052781</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Rahim yar Khan,Punjab Pakistan</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master's in Computer Science</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>fayyazwebpenter@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Info Rows -->
+        <p class="py-3">
+          I specialize in creating responsive websites, converting Figma, PSD, and XD designs into clean code, and building custom CMS solutions. With expertise in WordPress, HTML, CSS, PHP, and JavaScript, I deliver efficient and user-friendly web solutions.
+        </p>
+        
+        
+      </div>
+      <!-- End About Content -->
+
+    </div>
+  </div>
+
+</section>
+<!-- /About Section -->
+
+<!-- Stats Section -->
+<section id="stats" class="stats section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-emoji-smile"></i>
+          <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Happy Clients</strong> <span>Ensuring satisfaction with every project</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-journal-richtext"></i>
+          <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Projects Completed</strong> <span>Successfully delivering solutions on time</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-headset"></i>
+          <span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Hours of Support</strong> <span>Offering continuous support for smooth operations</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-people"></i>
+          <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Team Members</strong> <span>A dedicated and skilled team working with passion</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+<!-- Skills Section -->
+<section id="skills" class="skills section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>My expertise spans across a diverse set of tools and technologies, enabling me to deliver exceptional web solutions.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row skills-content skills-animation">
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>CSS</span> <i class="val">95%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>JavaScript</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>PHP</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>WordPress/CMS</span> <i class="val">95%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Laravel</span> <i class="val">65%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Skills Section -->
+
+ <!-- Resume Section -->
+<section id="resume" class="resume section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>Highlighting my education and professional journey, showcasing a strong foundation and extensive experience in delivering impactful web solutions and software development.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Summary</h3>
+
+        <div class="resume-item pb-0">
+          <h4>Fayyaz</h4>
+          <p><em>Full Stack Developer with 6+ years of experience in web development, specializing in both front-end and back-end technologies. Passionate about delivering high-quality solutions with an emphasis on user experience and performance optimization.</em></p>
+          <ul>
+            <li>Rahim Yar Khan, Pakistan</li>
+            <li>(+92) 03090502781</li>
+            <li>fayyazwebpenter@gmail.com</li>
+          </ul>
+        </div><!-- End Resume Item -->
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>Bachelor's in Computer Science</h4>
+          <h5>2018 - 2020</h5>
+          <p><em>The Islamia University of Bahawalpur</em></p>
+          <p>Specialized in web technologies and software development. Focused on building strong foundations in programming, algorithms, and database management. Completed key projects in PHP, JavaScript, and React.</p>
+        </div><!-- End Resume Item -->
+
+        <div class="resume-item">
+          <h4>Intermediate in Computer Science</h4>
+          <h5>2016 - 2018</h5>
+          <p><em>Board of Intermediate & Secondary Education Bahawalpur</em></p>
+          <p>Focused on foundational programming skills, web development, and network security.</p>
+        </div><!-- End Resume Item -->
+
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Professional Experience</h3>
+        <div class="resume-item">
+          <h4>Full Stack Developer</h4>
+          <h5>Jan 2021 - Present</h5>
+          <p><em>Webpenter Software House, Rahim Yar Khan, Pakistan</em></p>
+          <ul>
+            <li>Designed and developed dynamic web applications, utilizing technologies like PHP, Laravel, MySQL, JavaScript, React, and Node.js.</li>
+            <li>Collaborated with cross-functional teams to ensure project deadlines were met while maintaining high-quality standards.</li>
+            <li>Optimized application performance, improving load times by 30% using best practices in front-end and back-end development.</li>
+            <li>Created and integrated RESTful APIs for improved functionality and streamlined user experience.</li>
+          </ul>
+        </div><!-- End Resume Item -->
+
+        <div class="resume-item">
+          <h4>Freelance Web Developer</h4>
+          <h5>2018 - 2020</h5>
+          <p><em>Freelance</em></p>
+          <ul>
+            <li>Worked on diverse web development projects, converting Figma, PSD designs into responsive websites.</li>
+            <li>Developed custom WordPress themes and plugins, delivering fully functional websites tailored to client requirements.</li>
+            <li>Handled end-to-end development, including front-end (HTML, CSS, JavaScript) and back-end (PHP, MySQL) programming.</li>
+            <li>Provided ongoing website maintenance and troubleshooting to ensure optimal site performance.</li>
+          </ul>
+        </div><!-- End Resume Item -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Resume Section -->
+
+  <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Experience innovative and impactful solutions that bring your ideas to life. From app development to branding, we provide creative and customized services tailored to your needs. Whether it's crafting engaging user experiences or designing visually appealing products, we make sure every detail reflects excellence. Explore our portfolio to see how we transform concepts into reality and create designs that inspire.</p>
+
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">App</li>
+        <li data-filter=".filter-product">Product</li>
+        <li data-filter=".filter-branding">Branding</li>
+        <li data-filter=".filter-books">Books</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Travel App</h4>
+              <p>An app for planning trips and managing travel details.</p>
+              <a href="assets/img/portfolio/app-1.jpg" title="Travel App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Smartwatch</h4>
+              <p>A modern smartwatch with fitness tracking features.</p>
+              <a href="assets/img/portfolio/product-1.jpg" title="Smartwatch" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Restaurant Branding</h4>
+              <p>Branding concept for a modern and elegant restaurant.</p>
+              <a href="assets/img/portfolio/branding-1.jpg" title="Restaurant Branding" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Cookbook</h4>
+              <p>A beautifully designed cookbook featuring new recipes.</p>
+              <a href="assets/img/portfolio/books-1.jpg" title="Cookbook" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Fitness App</h4>
+              <p>An app designed to track fitness activities and goals.</p>
+              <a href="assets/img/portfolio/app-2.jpg" title="Fitness App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Smart Home Device</h4>
+              <p>Innovative smart home device to automate daily tasks.</p>
+              <a href="assets/img/portfolio/product-2.jpg" title="Smart Home Device" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Tech Startup Branding</h4>
+              <p>A modern branding design for a tech startup.</p>
+              <a href="assets/img/portfolio/branding-2.jpg" title="Tech Startup Branding" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Travel Journal</h4>
+              <p>A beautifully designed journal for recording travel experiences.</p>
+              <a href="assets/img/portfolio/books-2.jpg" title="Travel Journal" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Photo Editing App</h4>
+              <p>A photo editing app with various filter and enhancement features.</p>
+              <a href="assets/img/portfolio/app-3.jpg" title="Photo Editing App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Wireless Headphones</h4>
+              <p>Wireless headphones with noise cancellation and great sound quality.</p>
+              <a href="assets/img/portfolio/product-3.jpg" title="Wireless Headphones" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Fashion Brand</h4>
+              <p>Branding concept for a high-end fashion brand.</p>
+              <a href="assets/img/portfolio/branding-3.jpg" title="Fashion Brand" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Design Book</h4>
+              <p>A book showcasing various design techniques and principles.</p>
+              <a href="assets/img/portfolio/books-3.jpg" title="Design Book" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      </div><!-- End Portfolio Items -->
+
+    </div><!-- End Isotope Layout -->
+
+  </div><!-- End Container -->
+
+</section><!-- End Portfolio Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>Experience innovative and impactful solutions that bring your ideas to life. From app development to branding, we provide creative and customized services tailored to your needs. Whether it's crafting engaging user experiences or designing visually appealing products, we make sure every detail reflects excellence. Explore our portfolio to see how we transform concepts into reality and create designs that inspire.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">Web Development</a></h4>
+          <p class="description">Creating responsive, high-performance websites with modern technologies tailored to your business needs.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">E-commerce Solutions</a></h4>
+          <p class="description">Providing end-to-end e-commerce solutions, from product design to seamless online store development.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">SEO Optimization</a></h4>
+          <p class="description">Boosting your website's visibility on search engines and driving organic traffic through effective SEO strategies.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">Mobile App Development</a></h4>
+          <p class="description">Building cross-platform mobile applications with user-friendly interfaces and robust functionality.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+        <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">UI/UX Design</a></h4>
+          <p class="description">Crafting intuitive, visually appealing user interfaces that ensure a seamless and engaging user experience.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+        <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">Branding & Strategy</a></h4>
+          <p class="description">Developing strong brand identities with creative strategies to make your brand stand out in the market.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+  </div>
+
+</section><!-- /Services Section -->
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Team Testimonials</h2>
+    <p>Our team members share their experiences and insights about our work and vision.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 1
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"Being Founder of this company, I’ve always believed in empowering individuals and fostering a collaborative culture. Our focus on delivering excellence and innovative solutions has been the cornerstone of our success."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/rashid-bukhari.png" class="testimonial-img" alt="Rashid Bukhari">
+            <h3>Rashid Bukhari</h3>
+            <h4>Founder</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"As the CEO of the company, I’ve seen firsthand how dedication, hard work, and a passion for innovation help us achieve our goals. It’s amazing to work with such talented individuals who share a common vision for success."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/ayoub.png" class="testimonial-img" alt="Ayoub Khokhar">
+            <h3>Ayoub Khokhar</h3>
+            <h4>CEO</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"Working as a Senior Developer, I’ve been able to explore new technologies and push the boundaries of innovation. It’s exciting to see the impact of our projects on our clients and the industry at large."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/zahid-khurshid.webp" class="testimonial-img" alt="Zahid Khurshid">
+            <h3>Zahid Khurshid</h3>
+            <h4>Senior Developer</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"As a Senior Developer, I am proud to contribute to cutting-edge projects that drive growth and success for our clients. Our team works in perfect harmony, creating innovative solutions that stand the test of time."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <img src="assets/img/testimonials/m-sadiq.png" class="testimonial-img" alt="M. Sadiq">
+            <h3>M. Sadiq</h3>
+            <h4>Senior Developer</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Reach out to us for inquiries, collaborations, or support. We're here to help!</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Rahim Yar Khan,Punjab Pakistan</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+92 03090502781</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>fayyazwebpenter@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1754.314662765599!2d70.32336068632794!3d28.430439648577735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393a07645eb45a89%3A0x6de035ce5bdb86d0!2sWebpenter%20IT%20Services!5e0!3m2!1sen!2s!4v1735129241827!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div><!-- End Contact Info -->
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <label for="name-field" class="pb-2">Your Name</label>
+              <input type="text" name="name" id="name-field" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email-field" class="pb-2">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email-field" placeholder="Enter your email" required>
+            </div>
+
+            <div class="col-md-12">
+              <label for="subject-field" class="pb-2">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject-field" placeholder="Enter subject" required>
+            </div>
+
+            <div class="col-md-12">
+              <label for="message-field" class="pb-2">Message</label>
+              <textarea class="form-control" name="message" rows="10" id="message-field" placeholder="Enter your message" required></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading...</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Fayyaz Ahmad Portfolio</strong> | All Rights Reserved</p>
+      </div>
+      <div class="credits text-center">
+        <p>Designed and Developed by <a href="https://fayyaz-webpenter.github.io/fayyaz-dev.github.io/">Fayyaz Ahmad</a></p>
+      </div>
+    </div>
+  
+  </footer>
+  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
