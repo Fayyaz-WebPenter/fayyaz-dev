@@ -227,3 +227,43 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+document.querySelector('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const loadingElement = document.querySelector('.loading');
+  const errorElement = document.querySelector('.error-message');
+  const sentElement = document.querySelector('.sent-message');
+
+  // Reset message visibility
+  loadingElement.style.display = 'block';  // Show loading
+  errorElement.style.display = 'none';     // Hide error message
+  sentElement.style.display = 'none';      // Hide success message
+
+  const formData = new FormData(this);
+
+  fetch('forms/contact.php', {
+      method: 'POST',
+      body: formData,
+  })
+  .then(response => response.json())  // Parse the JSON response
+  .then(data => {
+      loadingElement.style.display = 'none';  // Hide loading message
+
+      // Show success or error message based on response
+      if (data.success) {
+          sentElement.textContent = data.message;  // Set success message
+          sentElement.style.display = 'block';     // Show success message
+      } else {
+          errorElement.textContent = data.message;  // Set error message
+          errorElement.style.display = 'block';     // Show error message
+      }
+  })
+  .catch(() => {
+      loadingElement.style.display = 'none';  // Hide loading message on error
+      errorElement.textContent = 'An unexpected error occurred. Please try again later.';
+      errorElement.style.display = 'block';   // Show error message
+  });
+});

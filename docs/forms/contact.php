@@ -1,41 +1,58 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+require '../vendor/autoload.php';
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header('Content-Type: application/json'); // Set response type to JSON
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $subject = $_POST['subject'] ?? '';
+    $message = $_POST['message'] ?? '';
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+    if (!$name || !$email || !$subject || !$message) {
+        echo json_encode(['success' => false, 'message' => 'All fields are required.']);
+        exit;
+    }
 
-  echo $contact->send();
-?>
+    $mail = new PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'fayyazwebpenter@gmail.com';
+        $mail->Password = 'umhb ymxa vqay hjnb';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        $mail->setFrom($email, $name);
+        $mail->addAddress('fayyazwebpenter@gmail.com');
+
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = "<strong>Name:</strong> {$name}<br><strong>Email:</strong> {$email}<br><strong>Message:</strong> {$message}";
+       
+        $response = [
+          "success" => true,
+          "message" => "Message Sent successfully to Fayyaz"
+      ];
+      
+      try {
+          $mail->send();
+      } catch (Exception $e) {
+          $response["success"] = false;
+          $response["message"] = "There was an error sending the form. Please try again later.";
+      }
+      
+      header('Content-Type: application/json');
+      echo json_encode($response);
+ 
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo]);
+    }
+}
