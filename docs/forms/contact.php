@@ -48,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $response["success"] = false;
           $response["message"] = "There was an error sending the form. Please try again later.";
       }
-      
-      header('Content-Type: application/json');
+      header('Access-Control-Allow-Origin: https://fayyaz-webpenter.github.io');
+
       echo json_encode($response);
  
     } catch (Exception $e) {

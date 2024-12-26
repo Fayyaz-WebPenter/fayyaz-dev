@@ -229,7 +229,6 @@
 })();
 
 
-
 document.querySelector('form').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -238,31 +237,32 @@ document.querySelector('form').addEventListener('submit', function (e) {
   const sentElement = document.querySelector('.sent-message');
 
   // Reset message visibility
-  loadingElement.style.display = 'block';  // Show loading
+  loadingElement.style.display = 'block';  // Show loading spinner
   errorElement.style.display = 'none';     // Hide error message
   sentElement.style.display = 'none';      // Hide success message
 
   const formData = new FormData(this);
 
-  fetch('forms/contact.php', {
+  // Change the fetch URL to Formspree's endpoint for form submission
+  fetch('https://formspree.io/f/xeooenob', {  // Replace with your Formspree endpoint
       method: 'POST',
       body: formData,
   })
   .then(response => response.json())  // Parse the JSON response
   .then(data => {
-      loadingElement.style.display = 'none';  // Hide loading message
+      loadingElement.style.display = 'none';  // Hide loading spinner
 
-      // Show success or error message based on response
+      // Show success or error message based on the response
       if (data.success) {
-          sentElement.textContent = data.message;  // Set success message
+          sentElement.textContent = data.message || 'Your message has been sent. Thank you!';  // Set success message
           sentElement.style.display = 'block';     // Show success message
       } else {
-          errorElement.textContent = data.message;  // Set error message
+          errorElement.textContent = data.message || 'Something went wrong. Please try again.';  // Set error message
           errorElement.style.display = 'block';     // Show error message
       }
   })
   .catch(() => {
-      loadingElement.style.display = 'none';  // Hide loading message on error
+      loadingElement.style.display = 'none';  // Hide loading spinner on error
       errorElement.textContent = 'An unexpected error occurred. Please try again later.';
       errorElement.style.display = 'block';   // Show error message
   });
